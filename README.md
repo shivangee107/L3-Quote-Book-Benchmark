@@ -418,20 +418,3 @@ To move this benchmark closer to a production market-data book builder, the foll
 * fixed-capacity hash map for orderId lookup
 * low-overhead latency tracing
 * book state: valid / stale / recovering
-
-## Interview Summary
-
-This project benchmarks different active price-level indexing strategies for an L3 quote book.
-
-The common L3 core maintains:
-
-```text
-FIFO queues per price level
-orderId index for cancel/modify
-aggregate quantity per level
-best bid/ask lookup
-```
-
-The five implementations differ in how active price levels are indexed and how best bid/ask is recovered.
-
-The main learning is that in low-latency order books, performance depends not only on algorithmic complexity, but also on memory layout, cache locality, pointer chasing, allocation behavior, and tail latency.
