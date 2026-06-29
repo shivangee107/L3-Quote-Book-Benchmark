@@ -1,5 +1,3 @@
-I drafted this README to match your current code and interview story: five variants, fixed-size L3 messages, synthetic replay, latency histograms, checksum validation, and production-style tradeoffs. 
-
 # Low-Latency L3 Quote Book Benchmark
 
 A C++ benchmarking system for comparing multiple **L3 quote-book implementations** under deterministic market-data replay.
